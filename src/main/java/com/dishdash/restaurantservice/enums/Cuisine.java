@@ -1,5 +1,9 @@
 package com.dishdash.restaurantservice.enums;
 
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+
+
 public enum Cuisine {
     ITALIAN("Italian"),
     CHINESE("Chinese"),
@@ -11,7 +15,10 @@ public enum Cuisine {
     THAI("Thai"),
     GREEK("Greek"),
     SPANISH("Spanish"),
+    ASIAN("Asian"),
+    MEDITERRANEAN("Mediterranean"),
     OTHER("Other");
+
 
     private final String displayName;
 
