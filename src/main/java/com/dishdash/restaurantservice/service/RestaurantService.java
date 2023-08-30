@@ -8,4 +8,6 @@ public interface RestaurantService {
     ResponseDto addRestaurant(RequestDto requestDto);
 
     ResponseDto getRestaurant(long id);
+
+    ResponseDto deleteRestaurant(long id);
 }

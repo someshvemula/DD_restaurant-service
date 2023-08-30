@@ -31,4 +31,11 @@ public class RestaurantServiceImpl implements RestaurantService {
         Restaurant retrievedRestaurant = restaurantRepository.findById(id).get();
         return modelMapper.map(retrievedRestaurant, ResponseDto.class);
     }
+
+    @Override
+    public ResponseDto deleteRestaurant(long id) {
+        Restaurant deletedRestaurant = restaurantRepository.findById(id).get();
+        restaurantRepository.deleteById(id);
+        return modelMapper.map(deletedRestaurant, ResponseDto.class);
+    }
 }
