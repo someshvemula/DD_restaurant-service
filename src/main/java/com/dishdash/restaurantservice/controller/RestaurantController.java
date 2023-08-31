@@ -2,11 +2,15 @@ package com.dishdash.restaurantservice.controller;
 
 import com.dishdash.restaurantservice.dto.RequestDto;
 import com.dishdash.restaurantservice.dto.ResponseDto;
+import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.expression.spel.ast.NullLiteral;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/restaurants")
@@ -34,7 +38,10 @@ public class RestaurantController {
         return new ResponseEntity<>(deletedResponseDto, HttpStatus.OK);
     }
 
-
-
+    @GetMapping("")
+    public ResponseEntity<List<ResponseDto>> getAllRestaurants(@RequestParam(required = false) Cuisine cuisine){
+        List<ResponseDto> responseDtoList = restaurantService.getAllRestaurants(cuisine);
+        return new ResponseEntity<>(responseDtoList, HttpStatus.OK);
+    }
 
 }
