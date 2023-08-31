@@ -2,6 +2,7 @@ package com.dishdash.restaurantservice.dto;
 
 
 import com.dishdash.restaurantservice.enums.Cuisine;
+import com.dishdash.restaurantservice.enums.Currency;
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -23,4 +24,5 @@ public class RequestDto {
     private int averageDeliveryTimeInMinutes;
     private int deliveryFee;
     private int minimumOrderAmount;
+    private Currency currencyUsed;
 }

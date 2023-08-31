@@ -1,6 +1,7 @@
 package com.dishdash.restaurantservice.dto;
 
 import com.dishdash.restaurantservice.enums.Cuisine;
+import com.dishdash.restaurantservice.enums.Currency;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -22,4 +23,5 @@ public class ResponseDto {
     private int averageDeliveryTimeInMinutes;
     private int deliveryFee;
     private int minimumOrderAmount;
+    private Currency currencyUsed;
 }

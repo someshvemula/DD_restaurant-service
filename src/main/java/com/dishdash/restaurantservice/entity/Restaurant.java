@@ -1,6 +1,7 @@
 package com.dishdash.restaurantservice.entity;
 
 import com.dishdash.restaurantservice.enums.Cuisine;
+import com.dishdash.restaurantservice.enums.Currency;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -31,4 +32,6 @@ public class Restaurant {
     private int deliveryFee;
     @Column(nullable = false)
     private int minimumOrderAmount;
+    @Enumerated(EnumType.STRING)
+    private Currency currencyUsed;
 }
