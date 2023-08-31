@@ -3,10 +3,7 @@ package com.dishdash.restaurantservice.entity;
 import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.enums.Currency;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Entity
 @Getter
@@ -14,7 +11,7 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @Table(name = "restaurants")
-
+@Builder
 public class Restaurant {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
