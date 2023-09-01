@@ -2,16 +2,14 @@ package com.dishdash.restaurantservice.dto;
 
 import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.enums.Currency;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class ResponseDto {
     private long id;
     private String name;

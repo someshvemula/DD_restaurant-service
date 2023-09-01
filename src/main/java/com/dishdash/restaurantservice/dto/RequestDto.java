@@ -4,15 +4,13 @@ package com.dishdash.restaurantservice.dto;
 import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.enums.Currency;
 import jakarta.persistence.Column;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@Builder
 public class RequestDto {
     private long id;
     private String name;

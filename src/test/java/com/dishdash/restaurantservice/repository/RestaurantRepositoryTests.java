@@ -514,6 +514,4 @@ public class RestaurantRepositoryTests {
         Assertions.assertThat(restaurantList.isEmpty()).isEqualTo(true);
         Assertions.assertThat(restaurantList.size()).isEqualTo(0);
     }
-
-
 }
