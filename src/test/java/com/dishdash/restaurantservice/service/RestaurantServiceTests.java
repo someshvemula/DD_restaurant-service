@@ -5,6 +5,7 @@ import com.dishdash.restaurantservice.dto.ResponseDto;
 import com.dishdash.restaurantservice.entity.Restaurant;
 import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.enums.Currency;
+import com.dishdash.restaurantservice.exception.ResourceNotFoundException;
 import com.dishdash.restaurantservice.repository.RestaurantRepository;
 import com.dishdash.restaurantservice.service.impl.RestaurantServiceImpl;
 import org.assertj.core.api.Assertions;
@@ -125,5 +126,27 @@ public class RestaurantServiceTests {
         Assertions.assertThat(responseDto).isNotNull();
 
     }
+
+    // Junit test for getRestaurant operation which throws exception
+    @Test
+    @DisplayName("Junit test for getRestaurant operation which throws exception")
+    public void givenNonExistingRestaurantId_whenGetRestaurant_thenThrowsResourceNotFondException(){
+
+        // given
+        long restaurantId = 2;
+
+        // method stubbing
+        BDDMockito.given(restaurantRepository.findById(restaurantId)).willReturn(Optional.empty());
+
+        // when
+        org.junit.jupiter.api.Assertions.assertThrows(ResourceNotFoundException.class, () -> restaurantService.getRestaurant(restaurantId));
+
+        // then
+
+    }
+
+
+
+
 
 }
