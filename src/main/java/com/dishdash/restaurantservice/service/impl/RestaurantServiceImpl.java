@@ -7,6 +7,7 @@ import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.enums.Currency;
 import com.dishdash.restaurantservice.enums.Sort;
 import com.dishdash.restaurantservice.exception.BadRequestException;
+import com.dishdash.restaurantservice.exception.ResourceAlreadyExistsException;
 import com.dishdash.restaurantservice.exception.ResourceNotFoundException;
 import com.dishdash.restaurantservice.repository.RestaurantRepository;
 import com.dishdash.restaurantservice.service.RestaurantService;
@@ -28,6 +29,8 @@ public class RestaurantServiceImpl implements RestaurantService {
 
     @Override
     public ResponseDto addRestaurant(RequestDto requestDto) {
+        if(restaurantRepository.findByWebsite(requestDto.getWebsite()).isPresent())
+            throw new ResourceAlreadyExistsException("Restaurant", "Website", requestDto.getWebsite());
         Restaurant restaurant = modelMapper.map(requestDto, Restaurant.class);
         Restaurant addedRestaurant = restaurantRepository.save(restaurant);
         return modelMapper.map(addedRestaurant, ResponseDto.class);
