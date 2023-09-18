@@ -322,7 +322,7 @@ public class RestaurantServiceTests {
         List<ResponseDto> restaurantList = restaurantService.getAllRestaurants(cuisine, sortBy, search);
 
         // then
-        Assertions.assertThat(restaurantList).isNull();
+        Assertions.assertThat(restaurantList).isNotNull();
     }
 
     // Junit test case for getAllRestaurants operation with valid cuisine, null sortBy, and null search
