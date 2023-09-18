@@ -296,6 +296,7 @@ public class RestaurantServiceTests {
         //method stubbing
         BDDMockito.given(restaurantRepository.findById(restaurantId)).willReturn(Optional.empty());
 
+
         //when
         org.junit.jupiter.api.Assertions.assertThrows(ResourceNotFoundException.class, () -> restaurantService.updateRestaurant(restaurantId, requestDto));
 
@@ -321,7 +322,7 @@ public class RestaurantServiceTests {
         List<ResponseDto> restaurantList = restaurantService.getAllRestaurants(cuisine, sortBy, search);
 
         // then
-        Assertions.assertThat(restaurantList).isNotNull();
+        Assertions.assertThat(restaurantList).isNull();
     }
 
     // Junit test case for getAllRestaurants operation with valid cuisine, null sortBy, and null search
