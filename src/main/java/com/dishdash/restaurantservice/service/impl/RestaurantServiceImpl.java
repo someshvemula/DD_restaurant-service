@@ -4,7 +4,6 @@ import com.dishdash.restaurantservice.dto.RequestDto;
 import com.dishdash.restaurantservice.dto.ResponseDto;
 import com.dishdash.restaurantservice.entity.Restaurant;
 import com.dishdash.restaurantservice.enums.Cuisine;
-import com.dishdash.restaurantservice.enums.Currency;
 import com.dishdash.restaurantservice.enums.Sort;
 import com.dishdash.restaurantservice.exception.BadRequestException;
 import com.dishdash.restaurantservice.exception.ResourceAlreadyExistsException;

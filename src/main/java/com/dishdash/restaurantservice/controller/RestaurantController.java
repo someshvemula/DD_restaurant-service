@@ -24,7 +24,6 @@ public class RestaurantController {
 
     @GetMapping(path = "/{id}")
     public ResponseEntity<ResponseDto> getRestaurant(@PathVariable("id") long id){
-        System.out.println(id);
         ResponseDto retrievedResponseDto = restaurantService.getRestaurant(id);
         return new ResponseEntity<>(retrievedResponseDto, HttpStatus.OK);
     }
