@@ -305,7 +305,7 @@ public class RestaurantServiceTests {
 
     // Junit test case for get all restaurants operation with null cuisine, null sortBy and null search
     @Test
-    @DisplayName("Junit test case for get all restaurants operation with null cuisine, null sortBy and null search")
+    @DisplayName("Junit test case for get all restaurants operation with null cuisine, null sortBy and null search ")
     public void givenNullCuisineNullSortByNullSearch_whenGetAllRestaurants_thenReturnResponseDtoList(){
 
         // given
