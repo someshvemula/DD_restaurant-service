@@ -14,8 +14,7 @@ public enum Cuisine {
     GREEK("Greek"),
     SPANISH("Spanish"),
     ASIAN("Asian"),
-    MEDITERRANEAN("Mediterranean"),
-    OTHER("Other");
+    MEDITERRANEAN("Mediterranean");
 
 
     private final String displayName;

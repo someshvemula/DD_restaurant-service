@@ -105,4 +105,9 @@ public class RestaurantServiceImpl implements RestaurantService {
 
         return modelMapper.map(restaurantRepository.save(restaurant), ResponseDto.class);
     }
+
+    @Override
+    public Cuisine[] getAllCuisines() {
+        return Cuisine.values();
+    }
 }

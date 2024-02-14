@@ -2,6 +2,7 @@ package com.dishdash.restaurantservice.controller;
 
 import com.dishdash.restaurantservice.dto.RequestDto;
 import com.dishdash.restaurantservice.dto.ResponseDto;
+import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.service.RestaurantService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,6 +49,12 @@ public class RestaurantController {
     public ResponseEntity<ResponseDto> updateRestaurant(@PathVariable("id") long id, @RequestBody RequestDto requestDto){
         ResponseDto responseDto = restaurantService.updateRestaurant(id, requestDto);
         return new ResponseEntity<>(responseDto, HttpStatus.OK);
+    }
+
+    @GetMapping(path = "/cuisines")
+    public ResponseEntity<Cuisine[]> getCuisines(){
+        Cuisine[] cuisines = restaurantService.getAllCuisines();
+        return new ResponseEntity<>(cuisines, HttpStatus.OK);
     }
 
 }
