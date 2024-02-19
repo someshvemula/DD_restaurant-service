@@ -10,5 +10,4 @@ public enum Currency {
     BGN,
     BRL,
     CHF,
-    EGP,
 }
