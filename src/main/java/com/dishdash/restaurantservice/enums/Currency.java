@@ -6,4 +6,9 @@ public enum Currency {
     GBP,
     INR,
     EURO,
+    AUD,
+    BGN,
+    BRL,
+    CHF,
+    EGP,
 }
