@@ -4,6 +4,7 @@ import com.dishdash.restaurantservice.dto.RequestDto;
 import com.dishdash.restaurantservice.dto.ResponseDto;
 import com.dishdash.restaurantservice.enums.Cuisine;
 import com.dishdash.restaurantservice.service.RestaurantService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,9 +13,9 @@ import java.util.List;
 
 @RestController
 @RequestMapping(path = "/api/restaurants")
+@RequiredArgsConstructor
 public class RestaurantController {
 
-    @Autowired
     private RestaurantService restaurantService;
 
     @PostMapping(path = "")
