@@ -8,5 +8,4 @@ public enum Currency {
     EURO,
     AUD,
     BGN,
-    BRL,
 }
