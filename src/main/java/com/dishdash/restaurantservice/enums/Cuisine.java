@@ -14,8 +14,15 @@ public enum Cuisine {
     GREEK("Greek"),
     SPANISH("Spanish"),
     ASIAN("Asian"),
-    MEDITERRANEAN("Mediterranean");
-
+    MEDITERRANEAN("Mediterranean"),
+    GERMAN("German"),
+    BRAZILIAN("Brazilian"),
+    VIETNAMESE("Vietnamese"),
+    KOREAN("Korean"),
+    CAJUN("Cajun"),
+    CARIBBEAN("Caribbean"),
+    MOROCCAN("Moroccan"),
+    AUSTRALIAN("Australian");
 
     private final String displayName;
 
