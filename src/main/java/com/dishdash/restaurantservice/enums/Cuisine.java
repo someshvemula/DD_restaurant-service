@@ -25,7 +25,6 @@ public enum Cuisine {
     MOROCCAN("Moroccan"),
     AUSTRALIAN("Australian"),
     ANDHRA("Andhra"),
-    TAMIL("Tamil"),
     HYDERABAD("Hyderabad");
 
     private final String displayName;
