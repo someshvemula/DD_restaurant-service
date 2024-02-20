@@ -21,8 +21,7 @@ public enum Cuisine {
     KOREAN("Korean"),
     CAJUN("Cajun"),
     CARIBBEAN("Caribbean"),
-    MOROCCAN("Moroccan"),
-    AUSTRALIAN("Australian");
+    MOROCCAN("Moroccan");
 
     private final String displayName;
 
