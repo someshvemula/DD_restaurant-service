@@ -5,4 +5,5 @@ public enum Currency {
     INR,
     EURO,
     BGN,
+    AUD,
 }
