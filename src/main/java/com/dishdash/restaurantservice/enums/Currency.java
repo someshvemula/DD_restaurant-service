@@ -9,4 +9,5 @@ public enum Currency {
     BGN,
     AUD,
     ARS,
+    YEN,
 }
