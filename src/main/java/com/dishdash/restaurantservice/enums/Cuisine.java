@@ -3,6 +3,7 @@ package com.dishdash.restaurantservice.enums;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 public enum Cuisine {
+//    Cuisines
     ITALIAN("Italian"),
     CHINESE("Chinese"),
     MEXICAN("Mexican"),
